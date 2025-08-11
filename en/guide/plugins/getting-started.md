@@ -36,7 +36,7 @@ corepack enable
 
 ## Running Yskra Project {#run-yskra}
 
-1. `git clone https://github.com/yskra-app/yskra.git`
+1. `git clone https://github.com/yskra/yskra.git`
 2. `cd yskra`
 3. `pnpm install`
 4. `pnpm run dev`

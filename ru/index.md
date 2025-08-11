@@ -13,7 +13,7 @@ hero:
       link: /ru/guide/introduction
     - theme: alt
       text: GitHub
-      link: https://github.com/Yskra-app  
+      link: https://github.com/yskra  
   image:
     src: /logo.svg
     alt: Yskra

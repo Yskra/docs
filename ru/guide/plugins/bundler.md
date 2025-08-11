@@ -9,7 +9,7 @@
 Вы можете настроить любой другой сборщик самостоятельно с любым другими инструментами для JavaScript, тот же TypeScript или Sass/PostCSS или TailwindCSS для стилей и так далее.
 
 ### Шаблон плагина {#template}
-Дальше мы будем использовать минимальный [шаблон](https://github.com/Yskra-app/plugins-template) на [Vite](https://vite.dev) с несколькими плагинами.
+Дальше мы будем использовать минимальный [шаблон](https://github.com/yskra/plugins-template) на [Vite](https://vite.dev) с несколькими плагинами.
 
 Ожидается, что директория с вашими плагинами будет находиться на одном уровне с проектом Yskra.
 Иначе отредактируйте `build.outDir` в `vite.config.js`.

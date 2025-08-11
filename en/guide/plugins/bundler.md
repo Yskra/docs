@@ -8,7 +8,7 @@ Bundling also opens up possibilities for other types of transpilation, such as [
 You can configure any other bundler with any other JavaScript tools, including TypeScript or Sass/PostCSS, TailwindCSS for styles, and more.
 
 ### Plugin Template {#template}
-Moving forward, we'll use a minimal [template](https://github.com/Yskra-app/plugins-template) on [Vite](https://vite.dev) with several plugins.
+Moving forward, we'll use a minimal [template](https://github.com/yskra/plugins-template) on [Vite](https://vite.dev) with several plugins.
 
 It's expected that the directory containing your plugins will be at the same level as the Yskra project.
 If not, edit `build.outDir` in `vite.config.js`.

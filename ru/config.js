@@ -110,7 +110,7 @@ export default defineAdditionalConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/yskra-app/docs/edit/main/docs/:path',
+      pattern: 'https://github.com/yskra/docs/edit/main/docs/:path',
       text: 'Редактировать страницу'
     },
 
