@@ -47,7 +47,7 @@ ___
 
 At the bottom of the page, you will now see a button to enable Vue developer tools.
 
-You can also open them in a new tab by visiting the link http://localhost:8930/__devtools__/
+You can also open them in a new tab by visiting the link <ExternalLink href="http://localhost:8930/__devtools__/" />
 
 *We won't go into detail about these tools for now. You can familiarize yourself with them independently or as needed while developing and reading documentation on some application modules*
 

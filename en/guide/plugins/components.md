@@ -59,7 +59,7 @@ export default function plugin({ router }) {
 We used destructuring to immediately take `router` from the context
 :::
 
-Now you can go to http://localhost:8930/test and see our component.
+Now you can go to <ExternalLink href="http://localhost:8930/test"/> and see our component.
 
 
 ## Rendering in VNode {#vnode}

@@ -58,7 +58,7 @@ export default function plugin({ router }) {
 Мы использовали деструктуризацию, чтобы сразу взять из контекста `router`
 :::
 
-Теперь вы можете перейти на http://localhost:8930/test и увидите наш компонент.
+Теперь вы можете перейти на <ExternalLink href="http://localhost:8930/test" /> и увидите наш компонент.
 
 
 ## Рендер в VNode {#vnode}

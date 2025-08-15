@@ -61,4 +61,4 @@ yskra // [!code focus]
 └── src
 ```
 
-As soon as you edit or create a file, the page will automatically reload and you can see your plugin on the page http://localhost:8930/settings/plugins
+As soon as you edit or create a file, the page will automatically reload and you can see your plugin on the page <ExternalLink href="http://localhost:8930/settings/plugins" />
