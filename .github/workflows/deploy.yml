@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build Application
+    runs-on: ubuntu-latest
+    outputs:
+      artifact-id: ${{ steps.artifact.outputs.artifact-id }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install --production
+
+      - run: pnpm run build
+
+      - name: Upload artifact
+        id: artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: dist/
+
+  deploy:
+    name: Deploy to Cloudflare
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: read
+      deployments: write
+    environment:
+      name: deploy
+      url: ${{ steps.cloudflare.outputs.deployment-url }}
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: dist
+
+      - name: Create wrangler.toml
+        run: |
+          cat > wrangler.toml << 'EOF'
+            name = "yskra-docs"
+            compatibility_date = "$(date -I)"
+            assets = { not_found_handling = "single-page-application", directory = "dist" }
+          EOF
+
+      - name: Send assets to Cloudflare
+        id: cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
