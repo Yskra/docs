@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: dist/
+          path: .vitepress/dist/
 
   deploy:
     name: Deploy to Cloudflare
