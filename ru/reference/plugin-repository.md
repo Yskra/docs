@@ -16,6 +16,7 @@ interface PluginRepositoryItem {
     systemSource: string;
     version: string;
     author: string;
+    license: string;
     apiVersion: number;
     'name:locale'?: string;
     'overview:locale'?: string;

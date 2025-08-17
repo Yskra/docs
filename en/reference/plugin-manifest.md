@@ -38,6 +38,12 @@ A direct link where your plugin is located; this will be used during plugin inst
 
 The version of the API being used.
 
+## license <Badge type="warning">Required</Badge> {#license}
+
+- Format [SPDX-licensed identifier](https://spdx.org/licenses/) or `UNLICENSED`
+
+The license under which your plugin is distributed. For example, `MIT`, `MPL-2.0`, `UNLICENSED`.
+
 ## runtime {#runtime}
 
 - Format `'es' | 'system'`

@@ -25,7 +25,7 @@ outline: 2
    - `router` - [Vue Router](https://vue-router-ru.netlify.app/api/)
    - `i18n` - [Vue i18n](https://vue-i18n.intlify.dev/api/general.html/)
    - `pinia` - [Pinia](https://pinia-ru.netlify.app/api/modules/pinia.html#%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8)
-   - `vnode-utils` - [vue-vnode-utils](https://skirtles-code.github.io/vue-vnode-utils/)c
+   - `vnode-utils` - [vue-vnode-utils](https://skirtles-code.github.io/vue-vnode-utils/)
    - `arrow-navigation` - Библиотека пространственной навигации для Vue 3
    - `utils` - Каталог src/utils Yskra
 

@@ -43,6 +43,12 @@
 
 Версия используемого апи
 
+## license <Badge type="warning">Обязательный</Badge> {#license}
+
+- Формат [SPDX-идентификатор](https://spdx.org/licenses/) или `UNLICENSED`
+
+Лицензия, под которой распространяется плагин. Например `MIT`, `MPL-2.0`, `UNLICENSED`
+
 ## runtime {#runtime}
 
 - Формат `'es'|'system'`
