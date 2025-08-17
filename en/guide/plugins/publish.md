@@ -1,6 +1,6 @@
 # Publishing a Plugin {#publish}
 
-The final `.js` file can be published anywhere, for example: on Github Pages.
+The final `.js` file can be published anywhere, for example GitHub/Cloudflare pages
 
 You can also create a [repository](../../reference/plugin-repository) with all your plugins to easily distribute them among users.
 
@@ -8,18 +8,26 @@ You can also create a [repository](../../reference/plugin-repository) with all y
 
 To publish in the official repository, the plugin must follow the recommendations described in the following section, as well as these additional requirements:
 
-1. The plugin should be open source.
+1. Plugin must be published under an open-source license.
+   - Allow the use of the plugin, modify and distribute it.
+   
+   For example: MIT, MPL-2.0, GPLv3
 
-   - A public repository or the final `.js` file should be unobfuscated and not minified or otherwise tangled.
+2. Code availability
+   - The source code of the plugin must be available (for example, in a public repository).
+   - If the source code is not available, the final `.js` file must be readable: without obfuscation, with the preservation of variable names and comments.
+   A significant minimization (for example, through uglify, terser with obfuscation) is not allowed if it hinders the analysis of the code.
+   
+   This allows anyone to view the code with a security risk or a dangerous code, and to use the plugin to train and create their own
 
-   This allows anyone who wants to check the code for malicious or unreliable code, as well as to use it for learning and creating their own.
+3. Plugin must support localization
+   - The plugin must use localization provided by the application. All text displayed to the user must be retrieved from the localization object provided by the application.
+   - Provide a way to translate community requests or feedback: Pull requests, email or a messenger.
 
-2. The plugin must support internationalization.
-   - Users should have the ability to submit a Pull Request or directly send a translation file in any language to the developer.
+4. The plugin should be accessible to everyone equally.
 
-3. The plugin should not discriminate against those who can use it.
-
-4. Compliance with app publishing rights on LG and Samsung app stores
+5. Compliance with app publishing rights on LG and Samsung app stores
 
 > Publishing apps in the LG Content Store and Samsung Smart Hub is regulated by their internal rules.
+> 
 > There is no exact list of banned applications publicly available, but you cannot publish apps with unlicensed, malicious, or content infringing material.

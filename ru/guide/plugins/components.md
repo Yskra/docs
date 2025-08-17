@@ -35,6 +35,7 @@ const MyComponent = defineComponent((props) => {
  * @version    1.0.0
  * @apiVersion 0
  * @author     developer
+ * @license    UNLICENSED
  * @source     null
  */
 

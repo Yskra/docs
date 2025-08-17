@@ -5,27 +5,16 @@ outline: 2
 
 To start developing plugins, you need to run the main Yskra project locally in development mode.
 
-## JavaScript Runtime Environment {#js-runtime}
+## Requirements {#requirements}
 
-In general, you can use any JavaScript runtime environment that supports ESM and Node.js API. Node.js can be installed using two popular methods:
+1. Install [NodeJS](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-1. NodeVersionManager
+::: details Node Version Manager
 
-> Recommended
+Use Node version manager, for example, [Volta](https://volta.sh/) or [nvm](https://github.com/nvm-sh/nvm), to avoid compatibility issues with Node.js and to switch between Node.js versions.
+For running the project, Node.js 20.19+ or higher is required.
 
-- [Unix](https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script)
-- [Windows](https://github.com/coreybutler/nvm-windows)
-
-After installation, install the latest version of Node:
-```bash
-nvm install node
-```
-
-2. NodeJS
-
-> Simpler option
-
-Install Node directly from the [official website](https://nodejs.org/en/download/)
+:::
 
 
 ### Enabling Corepack After Installing Node {#enable-corepack}

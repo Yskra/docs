@@ -5,36 +5,22 @@ outline: 2
 
 Вам необходимо запустить основной проект Yskra локально в режиме разработки, чтобы получить доступ к функциям для разработки плагинов.
 
+## Требования {#requirements}
 
-## Окружение среды выполнения JavaScript {#js-runtime}
+1. Установите [NodeJS](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-В общем, вы можете использовать любую среду выполнения JavaScript, которая поддерживает ESM и Nodejs API, Nodejs можно установить 2 популярными способами:
+::: details Менеджер версий Node
 
-1. NodeVersionManager
+Используйте менеджер версий Node, например, [Volta](https://volta.sh/) или [nvm](https://github.com/nvm-sh/nvm), чтобы избежать проблем с правами доступа и изменить версии Node.js. 
+Для запуска проекта требуется Node.js версии 20.19+ или выше.
 
-> Рекомендуется
-
-- [Unix](https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script)
-- [Венда](https://github.com/coreybutler/nvm-windows)
-
-После установки выполните установку последней версии Node
-```bash
-nvm install node
-```
-
-2. NodeJS
-
-> Вариант попроще 
-
-Установить Node напрямую [с официального сайта](https://nodejs.org/en/download/)
-
+:::
 
 ### После установки Node включите экстремальную функцию {#enable-corepack}
 
 ```bash
 corepack enable
 ```
-
 
 ## Запустите проект Yskra {#run-yskra}
 

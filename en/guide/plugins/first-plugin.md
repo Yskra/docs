@@ -25,6 +25,7 @@ For example, if the user disables and then re-enables the plugin.
  * @version    1.0.0
  * @apiVersion 0
  * @author     developer
+ * @license    UNLICENSED
  * @source     null
  */
 
@@ -39,11 +40,11 @@ export default function plugin(ctx) {
 
 ---
 
-1. The first step in every plugin is the plugin manifest. All fields of the manifest can be seen in [Reference. Plugin - Manifest](../../reference/plugin-manifest.md)
+1. The first step in every plugin is the plugin manifest (1-9 line). All fields of the manifest can be seen in [Reference. Plugin - Manifest](../../reference/plugin-manifest.md)
 
-2. The context (`ctx`) can also be found in [Reference. Plugin - Context](../../reference/plugin-context.md)
+2. The context (`ctx`) can also be found in [Reference. Plugin - Context](../../reference/plugin-context.md) (12 line)
 
-3. It's not required, but a plugin may return a function that will be called when unmounting.
+3. It's not required, but a plugin may return a function that will be called when unmounting (15-17 line).
    - If you changed something via the application API - undo this here
    - All functions from the plugin context have an undoing effect that will run on unmount
 
@@ -51,14 +52,16 @@ export default function plugin(ctx) {
 
 To load your plugin, use the `plugins` directory in the root of the project
 
-```console
-yskra // [!code focus]
+```shell
+yskra # [!code focus]
 ├── index.html
 ├── node_modules
-├── plugins // [!code focus]
-│   └── myPlugin.js // [!code focus]
+├── plugins # [!code focus]
+│   └── myPlugin.js #[!code focus]
 ├── // ...
 └── src
 ```
 
-As soon as you edit or create a file, the page will automatically reload and you can see your plugin on the page <ExternalLink href="http://localhost:8930/settings/plugins" />
+As soon as you edit or create a file, the page will automatically reload, and you can see your plugin on the page <ExternalLink href="http://localhost:8930/settings/plugins" />.
+
+If first time after creating a file, vite will not reload automatically, you need to restart manually - `ctrl+c` and `pnpm run dev` - after this, vite will keep track of changes in the file

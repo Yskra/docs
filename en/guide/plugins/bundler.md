@@ -35,7 +35,7 @@ pnpm install
 
 ## Commands {#commands}
 
-To bundle all plugins:
+To bundle all plugins to `/dist`:
 ```zsh
 pnpm run build
 ```
@@ -49,7 +49,7 @@ pnpm run dev:MyPlugin
 
 To bundle a plugin, run the command `pnpm run build:MyPlugin`.
 
-The plugin will immediately be copied to the `yskra/plugins` folder in two versions: using ESM (`*.js`) and using SystemJS (`*.system.js`). The latter is used for working in browsers without ESM support.
+The plugin will immediately be copied to the `../yskra/plugins` folder in two versions: using ESM (`*.js`) and using SystemJS (`*.system.js`). The latter is used for working in browsers without ESM support.
 
 This advantage of using a bundler is that you can write your code in a convenient modern JavaScript syntax, and the bundler will take care of the rest!
 

@@ -35,6 +35,7 @@ Let's now plug this component somewhere, for example on a new route path.
  * @version    1.0.0
  * @apiVersion 0
  * @author     developer
+ * @license    UNLICENSED
  * @source     null
  */
 
