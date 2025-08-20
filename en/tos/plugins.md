@@ -12,7 +12,7 @@ When connecting to a Plugin, you may also be bound by the terms of the respectiv
 
 ## 1. Acceptance of Terms
 
-By using the Plugin Function, you confirm that you have fully read, understood, and agree to be legally bound by these Terms, as well as the [Yskra General Terms of Use](.) and the [Yskra Privacy Policy](../privacy), and, if applicable, the separate terms of the Provider whose Plugin you are using.
+By using the Plugin Function, you confirm that you have fully read, understood, and agree to be legally bound by these Terms, as well as the [Yskra General Terms of Use](./index.md) and the [Yskra Privacy Policy](../privacy/index.md), and, if applicable, the separate terms of the Provider whose Plugin you are using.
 
 All mentioned documents may be updated from time to time without prior notice. Your continued use of the Function after changes are made constitutes your unconditional acceptance of the updated terms.
 
@@ -56,7 +56,7 @@ You may, at your discretion, transmit additional data to the Plugin — phone nu
 By transmitting such data, you are **providing it directly to the Provider**, who bears full responsibility for its processing, storage, and protection.
 
 We **do not have access** to data you provide to the Provider through the Plugin. Any processing of this data is governed by the **Provider's terms**. We do not control and are not responsible for their actions.
-Any data transmitted directly to Yskra is governed by the [Yskra Privacy Policy](../privacy).
+Any data transmitted directly to Yskra is governed by the [Yskra Privacy Policy](../privacy/index.md).
 Accordingly, you agree not to hold Yskra liable in the event that the service provider improperly disposes of, uses, or misuses the data you provided, under any circumstances.
 
 ## 5. Disclaimer
