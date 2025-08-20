@@ -12,6 +12,11 @@ export default defineConfig({
     }
   },
 
+  rewrites: {
+    'en/index.md': 'index.md',
+    // 'en/:rest*': ':rest*'
+  },
+
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,

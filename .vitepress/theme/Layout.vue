@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme'
-import { inBrowser, useData, useRouter } from 'vitepress'
-import { watch } from 'vue'
+import {inBrowser, useData, useRouter} from 'vitepress'
+import {watch} from 'vue'
 import localesCfg from '../locales.js';
 
 const { page, lang } = useData();
@@ -21,13 +21,23 @@ watch(() => page.value.isNotFound, (isNotFound) => {
       if (startWithLocaleRegex.test(route.path)) {
         return;
       }
-      const userLocale = document.cookie.match(/lang=(\w+)/)?.[0]
-      const locale = locales.includes(userLocale) ? userLocale : locales[0]
 
-      go(`${locale}/${route.path}${route.hash}`)
+      go(`${getUserLocale()}${route.path}${route.hash}`)
     },
     { immediate: true }
 )
+
+watch(() => route.path === '/', (isRoot) => {
+  if (isRoot) {
+    go(getUserLocale())
+  }
+}, { immediate: true })
+
+function getUserLocale() {
+  const userLocale = document.cookie.match(/lang=(\w+)/)?.[1]
+
+  return locales.includes(userLocale) ? userLocale : locales[0]
+}
 </script>
 
 <template>
