@@ -1,4 +1,5 @@
 import { defineConfig, resolveSiteDataByRoute } from 'vitepress';
+import locales from "./locales.js";
 
 const prod = !!process.env.PRODUCTION;
 
@@ -9,11 +10,6 @@ export default defineConfig({
     server: {
       port: 8931
     }
-  },
-
-  rewrites: {
-    'en/index.md': 'index.md',
-    // 'en/:rest*': ':rest*'
   },
 
   lastUpdated: true,
@@ -85,16 +81,7 @@ export default defineConfig({
     },
   },
 
-  locales: {
-    //root: { label: 'lang' },
-    en: { label: 'English' },
-    // zh: { label: '简体中文' },
-    // pt: { label: 'Português' },
-    ru: { label: 'Русский' },
-    // es: { label: 'Español' },
-    // ko: { label: '한국어' },
-    // fa: { label: 'فارسی' }
-  },
+  locales: locales,
 
 
   transformPageData: prod
