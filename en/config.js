@@ -110,7 +110,7 @@ export default defineAdditionalConfig({
 
 
     editLink: {
-      pattern: 'https://github.com/yskra/docs/edit/main/docs/:path',
+      pattern: 'https://github.com/yskra/docs/edit/master/docs/:path',
       text: 'Edit this page on GitHub'
     },
   }
