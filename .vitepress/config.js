@@ -5,16 +5,12 @@ const prod = !!process.env.PRODUCTION;
 
 export default defineConfig({
   title: 'Yskra Docs',
+  description: 'Yskra Docs',
 
   vite: {
     server: {
       port: 8931
     }
-  },
-
-  rewrites: {
-    'en/index.md': 'index.md',
-    // 'en/:rest*': ':rest*'
   },
 
   lastUpdated: true,
