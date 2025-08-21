@@ -1,5 +1,5 @@
 <script setup>
-   const link = window.location.origin + window.location.pathname
+const link = import.meta.env.SSR ? '' : window.location.origin + window.location.pathname;
 </script>
 
 # Условия использования плагинов в Yskra

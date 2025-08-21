@@ -34,6 +34,9 @@ watch(() => route.path === '/', (isRoot) => {
 }, { immediate: true })
 
 function getUserLocale() {
+  if (!inBrowser) {
+    return locales[0]
+  }
   const userLocale = document.cookie.match(/lang=(\w+)/)?.[1]
 
   return locales.includes(userLocale) ? userLocale : locales[0]
