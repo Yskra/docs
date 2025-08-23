@@ -16,7 +16,7 @@ outline: 2
 
 :::
 
-### После установки Node включите экстремальную функцию {#enable-corepack}
+### После установки Node включите corepack {#enable-corepack}
 
 ```bash
 corepack enable
