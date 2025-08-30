@@ -385,6 +385,7 @@ interface Hero {
   id: number;
   type: 'movie' | 'tv';
   ids: FilmCardIDs;
+  isAdult: boolean;
   image: string;
   overview: string;
   title: string;
