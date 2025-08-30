@@ -24,6 +24,13 @@ export default defineAdditionalConfig({
         base: '/en/guide/', items: [
           { text: 'Introduction', link: 'introduction' },
           {
+            text: 'General',
+            base: '/en/guide/general/',
+            items: [
+              { text: 'Installation', link: 'installation' },
+            ]
+          },
+          {
             text: 'Plugins',
             base: '/en/guide/plugins/',
             items: [

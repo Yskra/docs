@@ -23,6 +23,13 @@ export default defineAdditionalConfig({
         base: '/ru/guide/', items: [
           { text: 'Введение', link: 'introduction' },
           {
+            text: 'Общее',
+            base: '/ru/guide/general/',
+            items: [
+              { text: 'Установка', link: 'installation' },
+            ]
+          },
+          {
             text: 'Плагины',
             base: '/ru/guide/plugins/',
             items: [
