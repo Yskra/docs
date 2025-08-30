@@ -49,6 +49,7 @@ export default defineAdditionalConfig({
                   { text: 'Interaction with plugins', link: 'app-bus' },
                   { text: 'Interface', link: 'ui' },
                   { text: 'Internationalization', link: 'i18n' },
+                  { text: 'Examples', link: 'examples' },
                 ],
               },
               {

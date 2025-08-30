@@ -48,6 +48,7 @@ export default defineAdditionalConfig({
                   { text: 'Взаимодействие с плагинами', link: 'app-bus' },
                   { text: 'Интерфейс', link: 'ui' },
                   { text: 'Интернационализация', link: 'i18n' },
+                  { text: 'Примеры', link: 'examples' },
                 ],
               },
               {
