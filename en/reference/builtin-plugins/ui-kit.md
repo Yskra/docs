@@ -444,6 +444,7 @@ Component for displaying cards with images and text.
 
 - Props
   * items `Item[]`
+  * isLoading `boolean`
 ```ts
 interface Item {
   image?: string;

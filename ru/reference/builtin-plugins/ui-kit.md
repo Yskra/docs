@@ -503,6 +503,7 @@ interface FilmCardButtonPayload {
 
 - Пропсы
   * items `Item[]`
+  * isLoading `boolean`
 - Слоты
   * item `(item: Item) => VNode`
   * after-items `() => VNode`
