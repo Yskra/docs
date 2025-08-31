@@ -36,8 +36,35 @@ Fortunately, we can simplify part of the work by using the `Yskra.import('vnode-
 
 Simple example:
 ```js
+const TheRootSidebar = Yskra.componentRegister.get('TheRootSidebar');
+const { replaceChildren } = Yskra.import('vnode-utils');
+
 injector.post(TheRootSidebar, 'render', (/** @type VNode */ result) => {
   if (Array.isArray(result.children)) { // improve type safety
+    const newChildren = replaceChildren(result.children, (child) => {
+      return [h('div', 'Hello world!'), child];
+    });
+
+    return h(result, newChildren);
+  }
+
+  return result;
+});
+```
+
+## Work in runtime {#runtime}
+
+In development mode, the plugin for rendering Vnode takes it from `MODULE.render()`. But after building components, the logic is slightly changed, and it is used `MODULE.setup()` which actually returns `render()`.
+
+You can use the `Yskra.import('utils').patchComponent` utility to automatically check the mode of work and patch the required method.
+
+The simple example from the above:
+```js
+const { replaceChildren } = Yskra.import('vnode-utils');
+const { patchComponent } = Yskra.import('utils');
+
+patchComponent(injector, 'TheRootSidebar', (result) => {
+  if (Array.isArray(result.children)) {
     const newChildren = replaceChildren(result.children, (child) => {
       return [h('div', 'Hello world!'), child];
     });

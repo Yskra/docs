@@ -36,8 +36,35 @@ result.children[0] = h('div', 'Hello world!');
 
 Простой пример:
 ```js
+const TheRootSidebar = Yskra.componentRegister.get('TheRootSidebar');
+const { replaceChildren } = Yskra.import('vnode-utils');
+
 injector.post(TheRootSidebar, 'render', (/** @type VNode */ result) => {
   if (Array.isArray(result.children)) { // улучить типизацию
+    const newChildren = replaceChildren(result.children, (child) => {
+      return [h('div', 'Hello world!'), child];
+    });
+
+    return h(result, newChildren);
+  }
+
+  return result;
+});
+```
+
+## Работа в рантайме {#runtime}
+
+Во режиме разработки плагин для отрисовки Vnode берет из `MODULE.render()`. Но после сборки компонентов логика немного меняется и уже используется `MODULE.setup()` который фактически возвращает `render()`.
+
+Можете использовать утилиту `Yskra.import('utils').patchComponent`, который будет автоматически проверять режим работы и патчить нужный метод.
+
+Простой пример на примере выше:
+```js
+const { replaceChildren } = Yskra.import('vnode-utils');
+const { patchComponent } = Yskra.import('utils');
+
+patchComponent(injector, 'TheRootSidebar', (result) => {
+  if (Array.isArray(result.children)) {
     const newChildren = replaceChildren(result.children, (child) => {
       return [h('div', 'Hello world!'), child];
     });
